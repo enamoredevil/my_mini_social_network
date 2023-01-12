@@ -1,0 +1,93 @@
+
+.add_note_container {
+    padding: 10px;
+    min-height: 300px;
+    min-width: 600px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px black solid;
+}
+
+.input-title {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(99, 99, 145);
+    color: aqua;
+    font-size: 18px;
+    border: 1px solid aqua;
+}
+
+
+.input-title::placeholder {
+    color: rgb(56, 214, 214);
+    font-size: 18px;
+}
+
+.input-note {
+    width: 100%;
+    resize: none;
+    background-color: rgb(99, 99, 145);
+    color: aqua;
+    font-size: 18px;
+    border: 1px solid aqua;
+}
+
+.input-note::placeholder {
+    color: rgb(56, 214, 214);
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.note-button{
+    font-size: 18px;
+    transition: 0.6s;
+    background-color: rgb(99, 99, 145);
+    color: white;
+    border: 1px solid aqua;
+}
+
+
+.note-button:hover{
+    background-color: aqua;
+}
+
+.add_note_buttons{
+    display: flex;
+    justify-content: space-around
+}
+
+
+.input-checkbox {
+    margin-top: 10px;
+    width: 17px;
+    height: 18px;
+    accent-color: aqua;
+}
+
+
+
+.input-checkbox-title {
+    font-size: 18px;
+    color: aqua
+}
+
+.input-checkbox-container {
+    background-color: rgb(99, 99, 145);
+    text-align: center;
+    border: 1px solid aqua;
+    margin-bottom: 20px;
+}
+
+.input-checkbox-container p {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+
+.input-checkbox-container label {
+    font-size: 20px;
+    font-weight: 600;
+}

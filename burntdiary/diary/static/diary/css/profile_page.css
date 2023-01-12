@@ -1,0 +1,105 @@
+.profile-container {
+    border: 1px solid black;
+    max-width: 800px;
+    background-color: rgb(99, 99, 145);
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    max-height: fit-content;
+}
+
+
+.left-menu {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+}
+
+
+.profile-photo {
+    overflow: hidden;
+    min-height: fit-content;
+    min-height: fit-content;
+    text-align: center;
+}
+
+.profile-photo img {
+    border: 1px solid aqua;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    height: fit-content;
+    padding: 5px;
+    overflow-x:hidden;
+}
+
+.profile-info__item {
+    color: aqua;
+}
+
+.profile-info__preitem {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.right-menu {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-left: 5px;
+    width: 70%;
+    padding: 10px;
+    max-height: fit-content;
+}
+
+.bio {
+    max-height: fit-content;
+    word-wrap: break-word;
+    color: aqua;
+}
+
+
+.logout-link {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: 0.5s;
+}
+
+.logout-link:hover {
+    color:aqua;
+}
+
+
+.edit-link {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: 0.5s;
+}
+
+.edit-link:hover {
+    color:aqua;
+}
+
+
+
+
+.delete-link {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    transition: 0.5s;
+}
+
+.delete-link:hover {
+    color: red;
+}

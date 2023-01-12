@@ -1,0 +1,78 @@
+.home-page-container {
+    margin: 0 auto;
+    max-width: fit-content;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* LEFT CONTAINER  */
+.home-page-container__left {
+    
+    padding: 5px;
+    max-width: 600px;
+}
+
+.home-page-container__left p {
+    font-size: 24px;
+    color: white;
+}
+
+.home-page-container__left h2 {
+    color: red;
+
+}
+
+
+
+/* LEFT CONTAINER END */
+
+
+
+/* RIGHT CONTAINER */
+
+.home-page-container__right {
+    border: 1px solid aqua;
+    background-color: black;
+}
+
+
+.home-page-container__right h2 {
+    color: aqua;
+    padding: 15px
+}
+
+.support-item {
+    list-style: none;
+    position: relative;
+}
+
+.support-item::before {
+    content: url("../images/telegram2.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.support-item a {
+    font-size: 24px;
+    text-decoration: none;
+    color: aqua;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-top: 15px;
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+
+.support-item a:hover {
+    color: red;
+}
+
+
+
+/* RIGHT CONTAINER END */

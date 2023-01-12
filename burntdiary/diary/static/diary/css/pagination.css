@@ -1,0 +1,12 @@
+.pagination-style a {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: 1px solid aqua;
+}
+
+
+.pagination-style a:hover {
+    color: aqua;
+    background-color: rgb(228, 235, 235);
+}

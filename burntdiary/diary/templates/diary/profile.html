@@ -1,0 +1,35 @@
+{% extends 'diary/base_template_with_navbar.html '%}
+
+{% block content %}
+    <div class="profile-container">
+        <div class="left-menu">
+            <div class="profile-photo">
+                    <img src="{{ user.photo.url }}" alt="profile-photo" height="120px" width="120px">
+            </div>
+            <div class="profile-info">
+                <p class="profile-info__preitem">Your Nickname: <strong><span class="profile-info__item">{{ user.username }}</span></strong></p>
+                <p class="profile-info__preitem">Your Email:<strong><span class="profile-info__item"> {{ user.email }}</span></strong></p>
+                <p class="profile-info__preitem">Register Time:<br><strong> <span class="profile-info__item">{{ user.register_time }}</span></strong></p>
+                <hr>
+                <p><a class="edit-link" href="{% url 'edit_profile' %}">Edit Info</a></p>
+                <p><a class="logout-link" href="{% url 'profile_notes' user.username %}">My notes</a></p>
+                <p>
+                    <a class="logout-link" href="{% url 'logout' %}">Log out</a>
+                </p>
+                
+                <p><a class="delete-link" href="{{ user.get_url_to_delete_account }}">Delete profile</a></p>
+            </div>
+        </div>
+
+        <div class="right-menu">
+            <div class="bio">
+                <h2>Biography</h2>
+                <hr>
+                <p>{{ user.biography }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="user-profile-back-button">
+        <a href="{% url 'notes' %}">Back</a>
+    </div>
+{% endblock %}

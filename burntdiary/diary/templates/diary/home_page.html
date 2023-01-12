@@ -1,0 +1,20 @@
+{% extends 'diary/base_template_with_navbar.html '%}
+
+{% block content %}
+<div class="home-page-container">
+    <div class="home-page-container__left">
+        <h2>Burnt Diary</h2>
+        <p>Burnt Diary is a simple social network where people can make notes, comment on them, and exchange their
+            experience for free</p>
+    </div>
+    <div class="home-page-container__right">
+        <h2>Contacts and Support</h2>
+
+        <ul class="support-links">
+            <!-- <li class="support-item"><a href="">Vk</a></li> -->
+            <li class="support-item"><a target="_blank" href="{{ telegram }}">Telegram</a></li>
+            <!-- <li class="support-item"><a href="">Instagram</a></li> -->
+        </ul>
+    </div>
+</div>
+{% endblock %}

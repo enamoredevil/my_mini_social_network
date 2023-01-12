@@ -1,0 +1,157 @@
+.note-container {
+    max-height: fit-content;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(99, 99, 145);
+    border-radius: 10px;
+    border: 1px solid aqua;
+    padding-bottom: 0;
+    padding-top: 10px;
+    word-wrap: break-word;
+}
+
+.note_author {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.note-container h2 {
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px;
+    color: rgb(38, 255, 255);
+}
+
+.note-text {
+    text-align: center;
+    max-height: fit-content;
+    width: 100%;
+    border-radius: 10px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.paginator-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+.no-notes-home-page {
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid aqua;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+}
+
+
+/* NAVBAR IMAGE */
+
+.navbar-image {
+    margin-top: 0.3px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* NAVBAR IMAGE END */
+
+.add-note {
+    position: relative;
+    padding-left: 36px;
+    margin-left: 10px;
+}
+.add-note::before {
+    content: url("../images/navbardiary.svg");
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  
+.watch-notes {
+    position: relative;
+    padding-left: 36px;
+    margin-left: 10px;
+}
+
+.watch-notes::before {
+    content: url("../images/news.svg");
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+
+
+.note-create-time {
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.note-author {
+    margin-top: 2px;
+    text-align: right;
+    width: 100%;
+    font-weight: 700;
+    padding-right: 5px;
+    font-size: 24px;
+}
+
+
+
+.note-delete a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.note-delete a:hover {
+    color: aqua;
+}
+
+
+.user-profile-back-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.user-profile-back-button a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.user-profile-back-button a:hover {
+    color: aqua;
+}
+
+.link-to-author {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.link-to-author:hover {
+    color: aqua;
+}

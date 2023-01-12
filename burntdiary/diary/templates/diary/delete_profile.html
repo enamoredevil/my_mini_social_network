@@ -1,0 +1,18 @@
+{% extends 'diary/base_template_with_navbar.html '%}
+
+{% block content %}
+    <div class="delete-account-container">
+        {% if messages %}
+        {% for message in messages %}
+        <p class="delete-message-error">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p class="input-password-to-delete">Your account will be deleted as well as everything associated with it</p>
+            <!-- <label for="password-to-delete">Please, confirm your password to delete the account</label> -->
+            <!-- <p><input id="password-to-delete" class="input-password-to-delete" type="password" name="password" placeholder="password"></p> -->
+            <p><input class="delete-account-button" type="submit" value="Delete"></p>
+        </form>
+    </div>
+{% endblock %}

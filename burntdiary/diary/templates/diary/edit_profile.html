@@ -1,0 +1,40 @@
+{% extends 'diary/base_template_with_navbar.html '%}
+
+{% block content%}
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="profile-container">
+            <div class="left-menu">
+                <div class="profile-photo">
+                    {% if user.photo %}
+                    <img src="{{ user.photo.url }}" alt="profile-photo" height="120px" width="120px">
+                    {% else %}
+                    <img src="https://vk-wiki.ru/wp-content/uploads/2019/04/male-user-profile-picture.png" alt="profile photo" height="120px">
+                    {% endif %}
+                </div>
+                <div class="profile-info">
+                    <label class="photo-edit-label" for="photo-edit">Change your profile photo</label>
+                    <input id="photo-edit" class="edit-photo" type="file" name="photo" value="Edit photo">
+                    <p>Your Nickname: <input class="edit-input" type="text" name="username" value="{{ user.username }}"><strong></strong></input></p>
+                    <p>Your Email:<input class="edit-input" type="email" name="email" value="{{ user.email }}"><strong></strong></input></p>
+                    <p><input class="edit-profile-submit" type="submit" value="Save"></p>
+                    <p><a class="logout-link" href="{{ user.get_absolute_url }}">Back</a></p>
+        
+        
+                </div>
+            </div>
+            <div class="right-menu">
+                <div class="bio">
+                    <h2>Biography</h2>
+                    <hr>
+                    <textarea class="edit-biography" name="biography" value="{{ user.biography }}">{{ user.biography }}</textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="edit-profile-messages">
+        {% for message in messages %}
+        <p class="messages">{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

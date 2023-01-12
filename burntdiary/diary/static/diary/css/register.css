@@ -1,0 +1,102 @@
+/* REGISTER */
+
+body {
+    padding-top: 50px;
+}
+
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+    border: 1px solid aqua;
+    width: 70%;
+    margin: 0 auto;
+}
+.form-content
+{
+    padding: 5%;
+    padding-bottom: 30px;
+    border: 1px solid aqua;
+    margin-bottom: 2%;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-control {
+    border-radius:1.5rem;
+}
+
+.form-control::placeholder {
+    text-align: center;
+    
+}
+
+
+#login-password {
+    background-color: black;
+    color: aqua;
+}
+
+#login-email {
+    background-color: black;
+    color: aqua;
+}
+
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: fit-content;
+    cursor: pointer;
+    background: aqua;
+    color: black;
+    transition: 0.5s;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btnSubmit:hover
+{
+    color: red;
+}
+
+
+#login-register-back-link {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+#login-register-back-link:hover {
+    color: red;
+}
+
+
+#login-register-back-button {
+    padding: 5px;
+
+}
+
+.messages {
+    background-color: rgb(226, 69, 69);
+    color: black;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+.form-group input {
+    background-color: black;
+    color: aqua;
+}
+
+.form-group input:focus {
+    background-color: black;
+    color: aqua;
+}
+

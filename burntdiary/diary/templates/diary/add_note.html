@@ -1,0 +1,31 @@
+{% extends 'diary/base_template_with_navbar.html'%}
+
+{% block content%}
+
+    <div class="add_note_container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p><input type="text" placeholder="Title" name="title" class="input-title"></p>
+            <p><textarea class="input-note" placeholder="Make a note" name="note" id="" cols="30" rows="10"></textarea></p>
+
+            <div class="input-checkbox-container">
+                <p class="input-checkbox-title">If your note is public, it can be seen by other users.
+                </p>
+                <p class="input-checkbox-title">It's impossible to change in the future</p>
+                <p>
+                    <label for="input-checkbox1">Public</label>
+                    <input value="True" id="input-checkbox1" class="input-checkbox" type="radio" name="is_published">
+                </p>
+                <p>
+                    <label for="input-checkbox2">Private</label>
+                    <input value="False" id="input-checkbox2" class="input-checkbox" type="radio" name="is_published">
+                </p>
+            </div>
+
+            <div class="add_note_buttons">
+                <input class="note-button" type="submit" value="Create"> <input class="note-button" type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

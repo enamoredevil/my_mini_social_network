@@ -1,0 +1,60 @@
+{% extends 'diary/base_template_with_navbar.html'%}
+
+{% block content %}
+    {% if notes %}
+        {% for note in notes %}
+        <div class="note-container">
+            <div class="note_author">
+                {% if request.user == note.user %}
+                <p class="note-author">Author: <a class="link-to-author" href="{{ note.user.get_absolute_url }}">{{ note.user }}</a></p>
+                {% else%}
+                <p class="note-author">Author: <a class="link-to-author" href="{{ note.user.get_url_to_watch_profile }}">{{ note.user }}</a></p>
+                {% endif %}
+                <img class="navbar-image" src="{{ note.user.photo.url }}" alt="user-photo">
+            </div>
+            <h2>{{ note.title }}</h2><hr width="200px">
+            <div class="note-text">
+                {{ note.note }}
+            
+            </div> 
+            <hr width="200px">
+            <p class="note-create-time">Noted: {{ note.note_create_time }}</p>
+        </div>
+        {% endfor %}
+
+
+
+
+        {% if notes.has_other_pages %}
+        <div class="paginator-container">
+            <nav aria-label="...">
+                <ul class="pagination pagination-style">
+                    {% if notes.has_previous %}
+                    <li  class="page-item">
+                        <a  class="page-link" href="?page={{ notes.previous_page_number }}" tabindex="-1">Previous</a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for page in notes.paginator.page_range %}
+                    {% if notes.number == page %}
+                    <li class="page-item"><a style="color: aqua;" class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                    {% elif page >= notes.number|add:-2 and page <= notes.number|add:2 %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page }}">{{ page }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    
+                    {% if notes.has_next%}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ notes.next_page_number }}">Next</a>
+                </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+        {% endif %}
+    {% else %}
+    <div class="no-notes-home-page">
+        <p>Oops, no one has made any notes yet</p>
+    </div>
+    {% endif %}
+{% endblock %}

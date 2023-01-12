@@ -1,0 +1,27 @@
+{% extends 'diary/base_template_with_navbar.html'%}
+
+{% block content %}
+<div class="profile-container">
+    <div class="left-menu">
+        <div class="profile-photo">
+            <img src="{{ user_profile.photo.url }}" alt="profile-photo" height="120px" width="120px">
+        </div>
+        <div class="profile-info">
+            <p class="profile-info__preitem">Last visit:<br><strong><span class="profile-info__item"> {{ user_profile.last_login }}</span></strong></p>
+            <p class="profile-info__preitem">Nickname: <strong><span class="profile-info__item">{{ user_profile.username }}</span></strong></p>
+            <p class="profile-info__preitem">Email:<strong><span class="profile-info__item"> {{ user_profile.email }}</span></strong></p>
+        </div>
+    </div>
+
+    <div class="right-menu">
+        <div class="bio">
+            <h2>Biography</h2>
+            <hr>
+            <p>{{ user_profile.biography }}</p>
+        </div>
+    </div>
+</div>
+<div class="user-profile-back-button">
+    <a href="{% url 'notes' %}">Back</a>
+</div>
+{% endblock %}

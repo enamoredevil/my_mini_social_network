@@ -1,0 +1,48 @@
+.delete-account-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid aqua;
+    width: fit-content;
+    text-align: center;
+    padding: 15px;
+}
+
+
+.delete-account-container label {
+    color: aqua;
+    font-size: 24px;
+}
+
+
+.input-password-to-delete {
+    color: aqua;
+    font-size: 24px;
+    background-color: black;
+    margin-top: 15px;
+}
+
+
+.input-password-to-delete::placeholder {
+    text-align: center;
+}
+
+
+.delete-account-button {
+    margin-top: 10px;
+    font-size: 24px;
+    color: aqua;
+    border: 1px solid aqua;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.delete-account-button:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+
+.delete-message-error {
+    color: red;
+    font-size: 24px;
+}

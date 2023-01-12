@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'diary/css/register.css' %}" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link type="image/x-icon" href="{% static 'diary/images/diary.ico' %}" rel="shortcut icon">
+    <title>Login</title>
+</head>
+<body style="background-color: black;">
+<div class="container register-form">
+            <div class="form">
+                <div class="messages">
+                    {% for message in messages %}
+                    <p class="messages">{{ message }}</p>
+                    {% endfor %}
+                </div>
+                <div class="note">
+                    <p>Login Page</p>
+                </div>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="form-group" class="form-group">
+                                    <input autocomplete="off" id="login-email" type="email" class="form-control" placeholder="Your Email" value="" name="email"/>
+                                </div>
+                                <div id="form-group" class="form-group">
+                                    <input autocomplete="off" id="login-password" type="password" class="form-control" placeholder="Your Password" value="" name="password"/>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btnSubmit">Submit</button>
+                        <p style="margin-top:20px;"><button id="login-register-back-button" type="button" class="btnSubmit"><a id="login-register-back-link" href="{% url 'enter_page' %}">Back</a></button></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

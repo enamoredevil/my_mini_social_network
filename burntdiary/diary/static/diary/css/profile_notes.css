@@ -1,0 +1,71 @@
+.profile_notes_title {
+    border: 1px solid aqua;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+
+.profile_notes_title h2 {
+    text-align: center;
+    color: aqua;
+}
+
+
+.profile-notes-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 1px;
+}
+
+.note-status {
+    width: fit-content;
+    min-width: 200px;
+}
+
+.note-status button {
+    border: 0;
+    background-color: rgb(99, 99, 145);
+    padding: 0;
+    margin: 0;
+}
+
+.span-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.span-status {
+    color: aqua;
+    font-size: 18px;
+}
+
+.profile-notes-info p {
+    display: inline-block;
+
+}
+
+
+
+.note-delete {
+    margin-top: 30px;
+    text-align: right;
+    width: 100%;
+    font-weight: 700;
+    padding-right: 5px;
+    color: aqua;
+}
+
+.note-delete a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.note-delete a:hover {
+    color: red;
+}
