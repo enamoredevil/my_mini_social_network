@@ -10,7 +10,7 @@
                 {% else%}
                 <p class="note-author">Author: <a class="link-to-author" href="{{ note.user.get_url_to_watch_profile }}">{{ note.user }}</a></p>
                 {% endif %}
-                <img class="navbar-image" src="{{ note.user.photo.url }}" alt="user-photo">
+                <img width="120px" height="120px" class="navbar-image" src="{{ note.user.photo.url }}" alt="user-photo">
             </div>
             <h2>{{ note.title }}</h2><hr width="200px">
             <div class="note-text">
